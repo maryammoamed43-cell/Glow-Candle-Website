@@ -1,0 +1,878 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Poppins", sans-serif;
+}
+
+body{
+    background:#f7f3ee;
+    color:#4a3f35;
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+/* HEADER*/
+/*mariam elsayed*/
+
+.header{
+    background:#f0e4d7;
+    padding:15px 0;
+    position:sticky;
+    top:0;
+    z-index:10;
+}
+
+.nav-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:26px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#c49a6c;
+}
+
+.nav a{
+    margin-left:15px;
+    text-decoration:none;
+    color:#4a3f35;
+    font-weight:500;
+    transition:0.3s;
+}
+
+.nav a:hover{
+    color:#c49a6c;
+}
+
+/* HERO */
+/*mariam elsayed*/
+
+.hero {
+    padding: 160px 0;
+    background-image: url("candel\ 1.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5); 
+    z-index: 1;
+}
+
+.hero .hero-content {
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-text{
+    flex:1 1 300px;
+    padding:10px;
+}
+
+
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 50px;      
+    font-weight: 700;
+    color:#f0e4d7;
+}
+
+.hero-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    line-height: 1.8;
+    color:#f0e4d7;
+}
+.hero-image{
+    flex:1 1 300px;
+    text-align:center;
+}
+
+.hero-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn{
+    background:#e9c8a4;
+    padding:10px 25px;
+    color:rgb(66, 66, 66);
+    border-radius:25px;
+    text-decoration:none;
+    display:inline-block;
+    margin-top:10px;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#a77a4d;
+}
+
+/*ABOUT*/
+/*mariam elsayed*/
+.about-section {
+    background: #fff7ef; 
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #4a3f35;
+}
+
+.section-header span {
+    color: #4a3f35; 
+}
+
+.about-container {
+    width: 85%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+
+.about-image-card {
+    position: relative;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.about-image-card img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+}
+
+.about-image-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    background: rgba(255,255,255,0.85);
+    color: #4a3f35;
+    font-size: 22px;
+    font-weight: 600;
+    backdrop-filter: blur(3px);
+}
+
+.about-text-content h3 {
+    font-size: 28px;
+    color: #4a3f35;
+    margin-bottom: 15px;
+}
+
+.about-text-content p {
+    line-height: 1.8;
+    color: #6b5b50;
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+/*LEARN*/
+/*mariam eldokky*/
+.learn-btn {
+    display: inline-block;
+    background: #c49a6c;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 22px;
+    text-decoration: none;
+    font-weight: 600;
+    margin-top: 10px;
+    transition: 0.3s;
+}
+
+.learn-btn:hover {
+    background: #a87f52;
+}
+
+
+@media(max-width: 768px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+/* WHY CHOOSE US */
+/*mariam elsayed*/
+
+.why{
+    background:#f0e4d7;
+    padding:40px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:26px;
+    margin-bottom:25px;
+    color:#4a3f35;
+}
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+}
+
+.why-card{
+    background:#fdf8f3;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.why-card:hover{
+    transform:translateY(-5px);
+}
+
+.why-card h3{
+    margin-bottom:10px;
+    font-size:18px;
+    color:#4a3f35;
+}
+
+.why-card p{
+    line-height:1.6;
+    color:#7a6b5a;
+}
+
+@media(max-width:768px){
+    .hero-content{
+        flex-direction:column-reverse;
+        text-align:center;
+    }
+    
+    .about-container{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+/*SERVICES*/
+/*mariam elsayed*/
+.services {
+    background: #f5f2ef;  
+    padding: 40px 0;
+    margin-top: 40px;
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.service-box {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.service-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.service-box img {
+    width: 50px;
+    margin-bottom: 10px;
+    filter: invert(30%); 
+}
+
+.service-info h4 {
+    font-size: 18px;
+    color: #4a3f35; 
+    margin-bottom: 3px;
+}
+
+.service-info p {
+    font-size: 14px;
+    color: #7a6b5a; 
+}
+
+@media(max-width: 768px) {
+    .services-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}
+/* bestseller */
+/*mariam eldokky*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fffdf9;
+}
+
+.best-seller {
+    padding: 60px 20px;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    color: #4a3f35;
+    margin-bottom: 8px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: #7a6b5a;
+    margin-bottom: 40px;
+}
+
+.products {
+    display: flex;          
+    flex-wrap: wrap;       
+    gap: 20px;             
+    justify-content: center; 
+}
+
+.product-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+    width: 280px;
+}
+
+.product-card:hover {
+    background-color: #f0f0f0;
+}
+
+.image {
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.image img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.percentage {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    background: #c49a6c;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.product-card h3 {
+    font-size: 20px;
+    color: #4a3f35;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: #c49a6c;
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.old-price {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.product-btn {
+    background: #c49a6c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 22px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    transition: 0.3s;
+} 
+
+.product-btn:hover {
+    background: #a77f53;
+}
+/*LEARN*/
+/*mariam eldokky*/
+
+.learn{
+    color: #ccc;
+   /* display: inline;*/
+    background: #c49a6c;
+    color:wheat;
+    padding: 5px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.learn:hover{
+    color: #c49a6c;
+}
+/*REVIEWS*/
+/* mariam ismail */
+.reviews {
+    padding: 60px 20px;
+    background: #fff8f0;
+    text-align: center;
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.review-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #f0e0d0;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    text-align: left;
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.review-header h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.stars {
+    font-size: 20px;
+    color: #f7b400; 
+}
+
+.review-text {
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #444;
+}
+
+/*ADD REVIEW FORM */
+/* mariam ismail */
+.add-review {
+    padding: 60px 20px;
+    background: #fff3e6;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.review-form {
+    max-width: 450px;
+    background: #ffffff;
+    margin: auto;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #f3d6c9;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.review-form label {
+    text-align: left;
+    font-weight: bold;
+    margin-top: 10px;
+    color: #333;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #d9c1b1;
+    outline: none;
+    font-size: 14px;
+}
+
+.review-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.review-form button {
+    margin-top: 15px;
+    padding: 12px;
+    background: #ffb47c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.review-form button:hover {
+    background: #ff9b52;
+}
+
+#successMsg {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+}
+
+.search-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+#searchInput {
+    width: 60%;
+    padding: 12px 18px;
+    border-radius: 25px;
+    border: 2px solid #c49a6c;
+    background: #fff7ef;
+    font-size: 16px;
+    outline: none;
+    color: #4a3f35;
+    transition: 0.3s;
+}
+
+#searchInput:focus {
+    border-color: #a77f53;
+    background: #fffdf9;
+}
+/*CART */
+/*mariam hany */
+
+.cart-icon-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 100;
+    background: #c49a6c;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+}
+
+.cart-icon-container:hover {
+    background: #a77f53;
+}
+
+.cart-toggle-btn {
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    position: relative;
+    padding: 10px;
+}
+
+.cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #e9c8a4;
+    color: #4a3f35;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.main-content-wrapper {
+    transition: margin-right 0.3s ease;
+}
+
+.cart-sidebar {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    right: -300px;
+    background-color: #f7f3ee;
+    overflow-x: hidden;
+    transition: right 0.3s ease;
+    box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-sidebar.open {
+    right: 0;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #e9c8a4;
+    background: #f0e4d7;
+}
+
+.sidebar-header h2 {
+    font-size: 22px;
+    color: #4a3f35;
+}
+
+.sidebar-header .close-btn {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #4a3f35;
+}
+
+.cart-items {
+    padding: 15px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.empty-cart-message {
+    text-align: center;
+    margin-top: 50px;
+    color: #7a6b5a;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed #e9c8a4;
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.item-details h4 {
+    font-size: 16px;
+    color: #4a3f35;
+    margin: 0;
+}
+
+.item-details p {
+    font-size: 14px;
+    color: #c49a6c;
+    margin: 3px 0 0 0;
+}
+
+.item-controls {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.control-btn, .delete-item {
+    background: #f0e4d7;
+    border: 1px solid #e9c8a4;
+    padding: 5px 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #4a3f35;
+    margin: 0 4px;
+    transition: 0.3s;
+}
+
+.control-btn:hover, .delete-item:hover {
+    background: #e9c8a4;
+}
+
+.item-qty {
+    font-weight: 600;
+    color: #4a3f35;
+}
+
+.sidebar-footer {
+    padding: 15px;
+    border-top: 1px solid #e9c8a4;
+      background: #f0e4d7;
+}
+
+.cart-total-info {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 700;
+    color: #4a3f35;
+    margin-bottom: 15px;
+}
+
+.cart-total-info span:last-child {
+    color: #c49a6c;
+}
+
+.cart-action-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 8px;
+    transition: 0.3s;
+}
+
+.confirm-btn {
+    background: #c49a6c;
+    color: white;
+}
+
+.confirm-btn:hover:not(:disabled) {
+    background: #a77f53;
+}
+
+.confirm-btn:disabled {
+    background: #d9c1b1;
+    cursor: not-allowed;
+}
+
+.cancel-btn {
+    background: none;
+    color: #4a3f35;
+    border: 1px solid #c49a6c;
+}
+
+.cancel-btn:hover {
+    background: #f0e4d7;
+}
+/*CONTACT*/
+/*mariam hatem */
+.contact{
+    padding:40px 7%;
+}
+
+.heading{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:30px;
+}
+
+.heading span{
+    color:#ff588d;
+}
+
+.row{
+    display:flex;
+    align-items:center;
+    gap:30px;
+}
+
+form{
+    flex:1;
+    padding:20px;
+}
+
+.box{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ccc;
+    border-radius:5px;
+}
+
+.btn{
+    padding:12px 25px;
+    background:#333;
+    color:#fff;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+#woman{
+    margin-top: -50px; 
+    width: 300px;
+}
+
+.footer{
+    background:#f7f7f7;
+    padding:40px 7%;
+    margin-top:40px;
+}
+
+.footer-container{
+    display:flex;
+    justify-content:space-between;
+    gap: 20px;
+}
+.footer-container .box {
+    flex: 1;
+}
+.box h3{
+    margin-bottom:10px;
+}
+
+.box a{
+    display:block;
+    color:#333;
+    margin:6px 0;
+    text-decoration:none;
+}
+
+.credit{
+    text-align:center;
+    padding-top:20px;
+    margin-top:20px;
+    border-top:1px solid #ccc;
+}

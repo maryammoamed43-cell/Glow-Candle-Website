@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout | Glow Candle</title>
+    <link rel="stylesheet" href="style.css"> 
+    <style>
+       /*CHECKOUT*/
+       /*mariam hany*/
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fcf8f3; 
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            gap: 40px;
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 15px; 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+        h2 {
+            color: #c49a6c; 
+            border-bottom: 3px solid #f0e0d6; 
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+            font-weight: 600;
+        }
+        .checkout-form, .order-summary {
+            flex: 1;
+            padding: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: #555;
+            font-size: 0.95em;
+        }
+        input[type="text"], input[type="tel"], input[type="email"], textarea {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px; 
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+        input:focus, textarea:focus {
+            border-color: #c49a6c; 
+            outline: none;
+        }
+        .place-order-btn {
+            background-color: #c49a6c;
+            color: white;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 15px;
+        }
+        .place-order-btn:hover {
+            background-color: #a07d5a;
+        }
+        
+        .order-summary {
+            background-color: #fcf8f3; 
+            border-radius: 15px;
+            padding: 30px;
+        }
+        .summary-items {
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+        }
+        .summary-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 0.95em;
+            color: #755e3ba4;
+        }
+        .summary-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding-top: 10px;
+            color: #c49a6c; 
+        }
+        .empty-order-message {
+            color: #999;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="checkout-form">
+            <h2>Shipping Information 🕯️</h2>
+            <form id="checkoutForm">
+                
+                <label for="fullName">𝐅𝐮𝐥𝐥 𝐍𝐚𝐦𝐞:</label>
+                <input type="text" id="fullName" name="fullName" 
+                       pattern="[A-Za-z\s]+" 
+                       title="The name should contain only letters and spaces." 
+                       required>
+
+                <label for="phone">𝐏𝐡𝐨𝐧𝐞 𝐍𝐮𝐦𝐛𝐞𝐫:</label>
+                 <input type="tel" id="phone" name="phone" 
+                       pattern="[0-9]{11}" 
+                       title="Please enter a valid 11-digit phone number." 
+                       required>
+
+                <label for="email">𝐄𝐦𝐚𝐢𝐥 (𝐎𝐩𝐭𝐢𝐨𝐧𝐚𝐥):</label>
+                <input type="email" id="email" name="email">
+
+                <label for="address">𝐒𝐡𝐢𝐩𝐩𝐢𝐧𝐠 𝐀𝐝𝐝𝐫𝐞𝐬𝐬:</label>
+                <textarea id="address" name="address" required></textarea>
+
+                <label for="notes">𝐎𝐫𝐝𝐞𝐫 𝐍𝐨𝐭𝐞𝐬 (𝐎𝐩𝐭𝐢𝐨𝐧𝐚𝐥):</label>
+                <textarea id="notes" name="notes"></textarea>
+
+                <hr style="margin: 30px 0; border: none; border-top: 1px solid #f0e0d6;">
+                
+                <h2>Payment Method:</h2>
+                <p style="color: #666;">Cash on Delivery is the only available payment method.😊</p>
+                
+
+                <button type="submit" class="place-order-btn" id="placeOrderBtn">Place Order</button>
+            </form>
+        </div>
+
+        <div class="order-summary">
+            <h2>Order Summary</h2>
+            
+            <div class="summary-items" id="orderSummaryItems">
+                <p class="empty-order-message">Loading order details...</p>
+            </div>
+            
+            <div class="summary-total">
+                <strong>Order Total:</strong>
+                <span id="orderSummaryTotal">0.00 EGP</span>
+            </div>
+        </div>
+
+    </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+       
+        const summaryItemsContainer = document.getElementById('orderSummaryItems');
+        const summaryTotalElement = document.getElementById('orderSummaryTotal');
+        const checkoutForm = document.getElementById('checkoutForm');
+        const phoneInput = document.getElementById('phone'); 
+        const fullNameInput = document.getElementById('fullName'); 
+     
+        phoneInput.addEventListener('input', function() {
+            this.value = this.value.replace(/[^0-9]/g, '');
+        });
+
+
+        fullNameInput.addEventListener('input', function() {
+          
+            this.value = this.value.replace(/[^A-Za-z\s]/g, '');
+        });
+
+      
+        const storedCart = localStorage.getItem('shoppingCart');
+        let cart = [];
+        
+        if (storedCart) {
+            cart = JSON.parse(storedCart);
+        }
+
+       
+        function displayOrderSummary() {
+            summaryItemsContainer.innerHTML = ''; 
+            let total = 0;
+
+            if (cart.length === 0) {
+                summaryItemsContainer.innerHTML = '<p class="empty-order-message">No items found in your order. Please go back to the shop.</p>';
+                summaryTotalElement.textContent = '0.00 EGP';
+                return;
+            }
+
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+
+                const itemElement = document.createElement('div');
+                itemElement.classList.add('summary-item');
+                itemElement.innerHTML = `
+                    <span class="item-name">${item.name} (x${item.quantity})</span>
+                    <span class="item-price">${subtotal.toFixed(2)} EGP</span>
+                `;
+                summaryItemsContainer.appendChild(itemElement);
+            });
+
+          
+            summaryTotalElement.textContent = total.toFixed(2) + ' EGP';
+        }
+
+        displayOrderSummary();
+  
+        checkoutForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            
+            if (!checkoutForm.checkValidity()) {
+                return; 
+            }
+
+            if (cart.length === 0) {
+                alert("Your cart is empty!😊");
+                return;
+            }
+            
+       
+            alert('Order Placed Successfully! Thank you for shopping with Glow Candle.⭐🕯️');
+            
+
+            localStorage.removeItem('shoppingCart');
+       
+            window.location.href = 'proWEB.html'; 
+        });
+
+    });
+</script>
+
+</body>
+</html>

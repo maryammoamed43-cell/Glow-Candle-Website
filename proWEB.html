@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glow Candle | Handmade Candle Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER  -->
+     <!--mariam elsayed-->
+    <header class="header">
+        <div class="container nav-container">
+            <div class="logo">Glow <span>Candle</span></div>
+
+            <nav class="nav">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#why">Why Us</a>
+                <a href="Product.html" target="_blank">Candles</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#cart" id="headerCartBtn">Cart</a>
+                <a href="#best">Bestseller</a>
+                <a href="#best">Discounts</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+       <div class="main-content-wrapper" id="mainContentWrapper">
+    
+    <!-- review java script-->
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  
+  const form = document.getElementById("reviewForm");
+  const reviewsContainer = document.querySelector(".reviews-container");
+  const successMsg = document.getElementById("successMsg");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const rating = document.getElementById("rating").value;
+    const review = document.getElementById("review").value;
+
+    if (!name || !rating || !review) return;
+
+    const newReview = document.createElement("div");
+    newReview.classList.add("review-card");
+    newReview.innerHTML = `
+      <div class="review-header">
+          <h3>${name}</h3>
+          <div class="stars">${"★".repeat(rating)}${"☆".repeat(5-rating)}</div>
+      </div>
+      <p class="review-text">${review}</p>
+    `;
+
+    reviewsContainer.appendChild(newReview);
+
+    successMsg.style.display = "block";
+    form.reset();
+
+    setTimeout(() => {
+      successMsg.style.display = "none";
+    }, 2000);
+  });
+});
+</script>
+
+    <!-- HERO  -->
+     <!--mariam elsayed-->
+    <section class="hero" id="hero">
+    <div class="container hero-content">
+
+        <div class="hero-text">
+           <h1>Glow Candle</h1>
+<p>Soft light. Warm scent. Pure comfort.</p>
+<p>Our handcrafted candles are made from 100% natural wax and long-lasting fragrances that fill your home with peace.</p>
+<p>From cozy evenings to special celebrations — Glow Candle makes every moment brighter.</p>
+<a href="Product.html" target="_blank" class="btn">Shop Now</a>
+        </div>
+
+    </div>
+</section>
+
+        </div>
+    </section>
+
+
+    <!--ABOUT -->
+    <!--mariam elsayed-->
+<section class="about-section" id="about">
+    <h2 class="section-header">About <span>Us</span></h2>
+
+    <div class="about-container">
+        
+        <div class="about-image-card">
+            <img src="candel2.jpeg" alt="Candle Image">
+
+            <div class="about-image-text">Handmade Candle Art</div>
+        </div>
+
+        <div class="about-text-content">
+  
+            <p>
+                Glow Candle specializes in handcrafted natural wax candles, made with soft fragrances
+                that fill your home with peaceful, warm vibes. Every candle is designed to elevate your
+                space with elegance and comfort.
+            </p>
+
+            <p>
+                Our candles last longer, burn cleaner, and come in aesthetic designs perfect for
+                home decor, gifts, and cozy moments. With Glow Candle, every light tells a story.
+            </p>
+
+             <a href="learnmore.html" class="learn" target="_blank">Learn More</a>
+           
+        </div>
+        
+
+
+    </div>
+</section>
+
+
+
+<!--  best seller -->
+<!--mariam eldokky-->
+   <section class="best-seller" id="best">
+    <h2 class="section-title">Best Seller</h2>
+    <p class="section-subtitle">Our most loved candles!</p>
+
+    <div class="products">
+
+
+        <div class="product-card">
+            <div class="image">
+                <div class="percentage">10%</div>
+                <img src="vanila & coconut.png" alt="">
+            </div>
+            <h3>vanila & coconut</h3>
+            <p class="price">200 EGP</p>
+            <p class="price"><del>230 EGP</del></p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        
+        <div class="product-card">
+            <div class="image">
+                <div class="percentage">10%</div>
+                <img src="ice coffee.png" alt="">
+            </div>
+            <h3>ice coffee</h3>
+            <p class="price">300 EGP</p>
+            <p class="price"><del>340 EGP</del></p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+         <div class="product-card">
+            <div class="image"> 
+               <div class="percentage">10%</div>
+               <img src="iced matcha latte.png" alt="">
+            </div>
+            <h3>iced matcha latte</h3>
+            <p class="price">300 EGP</p>
+            <p class="price"><del>340 EGP</del></p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+         <div class="product-card">
+            <div class="image"> 
+               <div class="percentage">10%</div>
+               <img src="almond.png" alt="">
+            </div>
+            <h3>almond</h3>
+            <p class="price">250 EGP</p>
+            <p class="price"><del>280 EGP</del></p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+    </div>
+</section>
+
+    <!--  WHY CHOOSE US  -->
+    <section class="why" id="why">
+        <div class="container">
+
+            <h2 class="section-title">Why Choose Glow Candle?</h2>
+
+            <div class="why-grid">
+
+                <div class="why-card">
+                    <h3>🕯 Long-lasting Scents</h3>
+                    <p>We use natural essential oils that fill your room with soothing aromas.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>🌿 100% Natural Wax</h3>
+                    <p>Safe, clean-burning candles with no smoke or harmful chemicals.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>🎁 Aesthetic Designs</h3>
+                    <p>Perfect for gifts, decor, photography and special moments.</p>
+                </div>
+
+                <div class="why-card">
+                    <h3>🕒 Longer Burn Time</h3>
+                    <p>High-quality wax and wicks that last longer than regular candles.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- SERVICES  -->
+     <!--mariam elsayed-->
+<section class="services">
+    <div class="container services-container">
+
+        <div class="service-box">
+            <img src="https://img.icons8.com/ios/50/000000/trolley.png">
+            <div class="service-info">
+                <h4>Free Shipping</h4>
+                <p>On All Orders</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <img src="https://img.icons8.com/ios/50/000000/money-bag.png">
+            <div class="service-info">
+                <h4>10 Days Returns</h4>
+                <p>Moneyback Guarantee</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <img src="https://img.icons8.com/ios/50/000000/gift.png">
+            <div class="service-info">
+                <h4>Offer & Gift</h4>
+                <p>On All Orders</p>
+            </div>
+        </div>
+
+        <div class="service-box">
+            <img src="https://img.icons8.com/ios/50/000000/bank-card.png">
+            <div class="service-info">
+                <h4>Secure Payment</h4>
+                <p>Protected By PayPal</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!-- ====REVIEWS====-->
+ <!--mariam ismaile-->
+<section class="reviews" id="reviews">
+    <h2 class="section-title">Customer Reviews</h2>
+    <p class="section-subtitle">What our customers say about our handmade candles</p>
+
+    <div class="reviews-container">
+        
+<div class="review-card">
+    <div class="review-header">
+        <h3>Mariam S.</h3>
+        <div class="stars">★★★★★</div>
+    </div>
+    <p class="review-text">
+        The vanilla coconut candle smells AMAZING! Fills the whole room and lasts so long. Definitely ordering again!
+    </p>
+</div>
+
+<div class="review-card">
+    <div class="review-header">
+        <h3>Asmaa K.</h3>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <p class="review-text">
+        Loved the packaging and the soft scent. I just wish the size was a bit bigger. Still worth it!
+    </p>
+</div>
+
+<div class="review-card">
+    <div class="review-header">
+        <h3>Ahmed R.</h3>
+        <div class="stars">★★★★★</div>
+    </div>
+    <p class="review-text">
+        Perfect for gifts. My girlfriend loved it so much. Smells super cozy!
+    </p>
+</div>
+
+<div class="review-card">
+    <div class="review-header">
+        <h3>Sarah M.</h3>
+        <div class="stars">★★★★★</div>
+    </div>
+    <p class="review-text">
+        The iced coffee candle is beyond amazing! Smells EXACTLY like fresh coffee. Obsessed!
+    </p>
+</div>
+
+<div class="review-card">
+    <div class="review-header">
+        <h3>Lamia H.</h3>
+        <div class="stars">★★★★★</div>
+    </div>
+    <p class="review-text">
+        I got the almond candle and OMG the smell is heavenly! So warm and relaxing. Totally worth it!
+    </p>
+</div>
+
+<div class="review-card">
+    <div class="review-header">
+        <h3>Mohamed F.</h3>
+        <div class="stars">★★★★☆</div>
+    </div>
+    <p class="review-text">
+        Loved the scent and the packaging. Delivery was a bit slow but the product is amazing!
+    </p>
+</div>
+
+<div class="review-card">
+    <div class="review-header">
+        <h3>Farah A.</h3>
+        <div class="stars">★★★★★</div>
+    </div>
+    <p class="review-text">
+        The iced coffee candle is my favorite now! Smells exactly like coffee and makes my room cozy.
+    </p>
+</div>
+
+  </section>
+
+</section>
+<!-- ADD REVIEW FORM -->
+ <!--mariam ismaile-->
+<section class="add-review" id="add-review">
+    <h2 class="section-title">Write Your Review</h2>
+    <p class="section-subtitle">Share your experience with our candles</p>
+
+    <form id="reviewForm" class="review-form">
+
+        <label>Full Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" required>
+
+        <label>Your Rating:</label>
+        <select id="rating" required>
+            <option value="">Choose rating</option>
+            <option value="5">★★★★★ (5)</option>
+            <option value="4">★★★★☆ (4)</option>
+            <option value="3">★★★☆☆ (3)</option>
+            <option value="2">★★☆☆☆ (2)</option>
+            <option value="1">★☆☆☆☆ (1)</option>
+        </select>
+
+        <label>Your Review:</label>
+        <textarea id="review" placeholder="Write your review..." required></textarea>
+
+        <button type="submit">Submit Review</button>
+
+        <p id="successMsg" style="color: green; display: none; margin-top: 10px;">Review added successfully!</p>
+    </form>
+</section>
+<!--cart-->
+<!--mariam hany-->
+ </div>  <div class="cart-icon-container" id="cartIconContainer">
+    <a href="javascript:void(0)" class="cart-toggle-btn" id="openCartBtn">
+         🛒
+        <span class="cart-count" id="cartCount">0</span>
+    </a>
+</div>
+
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="sidebar-header">
+        <h2>Your Cart</h2>
+        <button class="close-btn" id="closeCartBtn">X</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <p class="empty-cart-message">Your cart is empty.</p>
+    </div>
+    <div class="sidebar-footer">
+        <div class="cart-total-info">
+            <span>Total:</span>
+            <span id="cartTotal">0 EGP</span>
+        </div>
+        <button class="cart-action-btn confirm-btn" id="confirmOrderBtn">Place an Order</button>
+        <button class="cart-action-btn cancel-btn" id="cancelOrderBtn">Cancel</button>
+    </div>
+</div>
+
+<script src="cart.js"></script> 
+ 
+<!-- CONTACT -->
+ <!--mariam hatem-->
+    <section class="contact" id="contact">
+        <h1 class="heading">Contact <span>Us</span></h1>
+
+        <div class="row">
+            <form>
+                <input type="text" placeholder="your name" class="box">
+                <input type="email" placeholder="your email" class="box">
+                <input type="number" placeholder="your number" class="box">
+                <textarea class="box" placeholder="message" cols="30" rows="10"></textarea>
+                <button class="btn">Send Message</button>
+            </form>
+
+            <div class="image">
+                <img src="candel.jpeg" id="woman">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER-->
+      <!--mariam hatem-->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="Product.html" target="_blank">Products</a>
+                <a href="#reviews">Review</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="box">
+                <h3>Locations</h3>
+                <a href="https://www.google.com/maps/place/India" target="_blank">India</a>
+                <a href="https://www.google.com/maps/place/United+States" target="_blank">USA</a>
+                <a href="https://www.google.com/maps/place/Japan" target="_blank">Japan</a>
+                <a href="https://www.google.com/maps/place/France" target="_blank">France</a>
+            </div>
+
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a target="_blank" href="https://wa.me/01005641182">01005641182</a>
+                <a target="_blank" href="mailto:mariamhatemmohamed8@gmail.com">mariamhatemmohamed8@gmail.com</a>
+                <a href="https://www.google.com/maps/place/Ismailia,+Egypt" target="_blank">ismailia-elsheikhzayed</a>
+            </div>
+        </div>
+
+        <div class="credit"> Created By <span>المريومات</span> | All Rights Reserved </div>
+    </footer>
+
+
+</body>
+</html>

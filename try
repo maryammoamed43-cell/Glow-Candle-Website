@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Glow Candle | Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<header class="header">
+    <div class="container nav-container">
+        <div class="logo">Glow <span>Candle</span></div>
+
+        <nav class="nav">
+            <a href="proWEB.html">Home</a>
+            <a href="#products">Products</a>
+             <a href="#cart" id="headerCartBtn">Cart</a> 
+        </nav>
+    </div>
+</header>
+<div class="cart-icon-container" id="cartIconContainer">
+    <a href="javascript:void(0)" class="cart-toggle-btn" id="openCartBtn">
+         🛒
+        <span class="cart-count" id="cartCount">0</span>
+    </a>
+</div>
+
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="sidebar-header">
+        <h2>Your Cart</h2>
+        <button class="close-btn" id="closeCartBtn">X</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <p class="empty-cart-message">Your cart is empty.</p>
+    </div>
+    <div class="sidebar-footer">
+        <div class="cart-total-info">
+            <span>Total:</span>
+            <span id="cartTotal">0 EGP</span>
+        </div>
+        <button class="cart-action-btn confirm-btn" id="confirmOrderBtn">Place an Order</button>
+        <button class="cart-action-btn cancel-btn" id="cancelOrderBtn">Cancel</button>
+    </div>
+</div>
+
+<!-- ===== SEARCH BAR ===== -->
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search for a candle...">
+</div>
+
+<!-- PRODUCTS PAGE ONLY -->
+<section class="products" id="products">
+    <h2 class="section-title">Our Products</h2>
+    <p class="section-subtitle">Handmade candles made with love and natural wax.</p>
+
+    <div class="container products-container">
+
+          <div class="product-card">
+            <div class="image-wrapper">
+                <div class="badag">10%</div>
+                <img src="ice coffee.png" alt="">
+            </div>
+            <h3>ice coffee</h3>
+            <p class="price">300 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="image-wrapper"> 
+               <div class="badag">10%</div>
+               <img src="iced matcha latte.png" alt="">
+            </div>
+            <h3>iced matcha latte</h3>
+            <p class="price">300 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+          <div class="product-card">
+            <div class="image-wrapper"> 
+               <div class="badag">10%</div>
+               <img src="almond.png" alt="">
+            </div>
+            <h3>almond</h3>
+            <p class="price">250 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+         <div class="product-card">
+            <img src="paris cafe.png" alt="">
+            <h3>paris cafe</h3>
+            <p class="price">320 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+         <div class="product-card">
+            <img src="strawberry pound cake.png" alt="">
+            <h3>strawberry pound cake</h3>
+            <p class="price">300 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        
+         <div class="product-card">
+            <img src="white caramel cold brew - Copy.png" alt="">
+            <h3>white caramel cold brew</h3>
+            <p class="price">300 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Vanila.png" alt="">
+            <h3>Vanilla Candle</h3>
+            <p class="price">120 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+         <div class="product-card">
+            <img src="morning coffe.png" alt="">
+            <h3>morning Coffee Candle</h3>
+            <p class="price">150 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+
+        <div class="product-card">
+            <img src="coconut lime verbena.png" alt="">
+            <h3>coconut lime verbena Candle</h3>
+            <p class="price">110 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="buble candle brown.png" alt="">
+            <h3>Bubble Candle brown</h3>
+            <p class="price">160 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="buble candle pink.png" alt="">
+            <h3>Bubble Candle pink</h3>
+            <p class="price">160 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <div class="image-wrapper">
+                <div class="badag">10%</div>
+                <img src="vanila & coconut.png" alt="">
+            </div>
+            <h3>vanila & coconut</h3>
+            <p class="price">180 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="morning coffe.png" alt="">
+            <h3>morning Coffee Candle</h3>
+            <p class="price">150 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="lavender.png" alt="">
+            <h3>Lavender Candle</h3>
+            <p class="price">130 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="warm vanila suger.png" alt="">
+            <h3>warm vanila suger</h3>
+            <p class="price">200 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Strawberry.png" alt="">
+            <h3>Strawberry</h3>
+            <p class="price">250 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Rose water & ivy.png" alt="">
+            <h3>Rose water & ivy</h3>
+            <p class="price">230 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Black cherry merlot.png" alt="">
+            <h3>Black cherry merlot</h3>
+            <p class="price">190 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="Cactus Blossom.png" alt="">
+            <h3>Cactus Blossom</h3>
+            <p class="price">150 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+         <div class="product-card">
+            <img src="into the night.png" alt="">
+            <h3>into the night</h3>
+            <p class="price">170 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        
+         <div class="product-card">
+            <img src="pure wonder.png" alt="">
+            <h3>pure wonder</h3>
+            <p class="price">200 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        
+         <div class="product-card">
+            <img src="Sugared Snickerdoodle.png" alt="">
+            <h3>Sugared Snickerdoodle</h3>
+            <p class="price">130 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        
+         <div class="product-card">
+            <img src="Sweet Cinnamon Pumpkin.png" alt="">
+            <h3>Sweet Cinnamon Pumpkin</h3>
+            <p class="price">1900 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+        
+         <div class="product-card">
+            <img src="Thousand wishes.png" alt="">
+            <h3>Thousand wishes</h3>
+            <p class="price">190 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+        <div class="product-card">
+            <img src="You are the one.png" alt="">
+            <h3>You are the one</h3>
+            <p class="price">190 EGP</p>
+            <button class="product-btn">Add to Cart</button>
+        </div>
+
+
+
+
+
+    </div>
+</section>
+<!-- ====search bar====-->
+<script>
+    const searchInput = document.getElementById("searchInput");
+
+    searchInput.addEventListener("keyup", function () {
+        let filter = searchInput.value.toLowerCase();
+        let cards = document.querySelectorAll(".product-card");
+
+        cards.forEach(card => {
+            let title = card.querySelector("h3").textContent.toLowerCase();
+
+            if (title.includes(filter)) {
+                card.style.display = "block";  // يظهر
+            } else {
+                card.style.display = "none";   // يختفي
+            }
+        });
+    });
+</script>
+</body>
+</html>
+ 
+        
+        
